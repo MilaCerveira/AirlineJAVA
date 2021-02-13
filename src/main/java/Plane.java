@@ -1,6 +1,6 @@
 public class Plane {
     private PlaneType type;
-    private double capacity;
+    private int capacity;
     private double finalWeight;
 
     public Plane(PlaneType type) {
@@ -13,7 +13,7 @@ public class Plane {
         return type;
     }
 
-    public double getCapacity() {
+    public int getCapacity() {
         return capacity;
     }
 
