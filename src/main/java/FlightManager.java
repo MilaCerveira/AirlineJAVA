@@ -17,6 +17,12 @@ public class FlightManager {
     public double calculateBaggageWeightOfFlight(Flight flight){
         double weightOfBagPerPerson = this.calculateWeightForBaggage(flight);
         int numBags = 0;
+        /* for each loop :
+        easier to write &understand
+        preferred over for loop when working with arrays
+         syntax for(dataType item: array) { ...}
+
+         */
         for (Passenger passenger : flight.getPassengers()){
             numBags += passenger.getNumBags();
         }

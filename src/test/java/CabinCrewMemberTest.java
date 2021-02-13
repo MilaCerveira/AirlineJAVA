@@ -7,7 +7,7 @@ public class CabinCrewMemberTest {
 
     @Before
     public void setUp(){
-        cabinCrewMember = new CabinCrewMember("Alex", CabinCrewMemberRank.FIRST_OFFICER);
+        cabinCrewMember = new CabinCrewMember("Mila", CabinCrewMemberRank.CAPTAIN);
     }
 
     @Test

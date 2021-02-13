@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Flight {
 
-    // inside <> is what is inside the list
+    // inside <> is what is inside the list a <Pilot> is inside list of pilots
     private List<Pilot> pilots;
     private List<CabinCrewMember> members;
     private List<Passenger> passengers = new ArrayList<>();
@@ -12,6 +12,7 @@ public class Flight {
     private String flightNumber;
     private String destinationAirport;
     private String departureAirport;
+    // refactor import java.time.localDateTime;
     private LocalDateTime departureTime;
 
     public Flight(List<Pilot> pilots, List<CabinCrewMember> members, List<Passenger> passengers,
@@ -28,11 +29,12 @@ public class Flight {
     }
 
 
-    public int getAvailableSeats(){
+    public int getAvailableSeats() {
         return plane.getCapacity() - passengers.size();
     }
-// define method specify types and names of agruments
-    public void bookPassenger(Passenger passenger){
+
+    // define method specify types and names of agruments
+    public void bookPassenger(Passenger passenger) {
         if (plane.getCapacity() > passengers.size()) {
             passenger.setFlight(this.flightNumber);
             passengers.add(passenger);
