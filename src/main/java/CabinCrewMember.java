@@ -6,7 +6,9 @@ public class CabinCrewMember {
         this.name = name;
         this.rank = rank;
     }
-
+    public String relayMessage(){
+        return "This is your cabin crew speaking";
+    }
     public String getName() {
         return name;
     }

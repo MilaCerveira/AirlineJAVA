@@ -1,6 +1,11 @@
-import com.sun.tools.javac.util.List;
+
 import org.junit.Before;
 import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
@@ -16,9 +21,12 @@ public class FlightTest {
         Passenger passenger = new Passenger("Dave", 2);
         Plane plane = new Plane(PlaneType.BOEING747);
 
-        flight = new Flight(List.of(pilot),
-                List.of(cabinCrewMember),
-                List.of(passenger),
+        List<Passenger> passengers = new ArrayList<>();
+        passengers.add(passenger);
+        flight = new Flight(
+                Arrays.asList(pilot),
+                Arrays.asList(cabinCrewMember),
+                passengers,
                 plane,
                 "100",
                 "AMS",
@@ -31,6 +39,14 @@ public class FlightTest {
     @Test
     public void getAvailableSeats() {
         assertEquals(99, flight.getAvailableSeats());
+    }
+
+    @Test
+    public void canBookPassenger(){
+        Passenger passenger = new Passenger("Rhiannon", 2);
+        int numOfPassengersBefore = flight.getPassengers().size();
+        flight.bookPassenger(passenger);
+        assertEquals(numOfPassengersBefore + 1, flight.getPassengers().size());
     }
 
 //    @Test

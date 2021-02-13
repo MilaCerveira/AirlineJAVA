@@ -8,7 +8,9 @@ public class Pilot {
         this.rank = rank;
         this.licenceNumber = licenceNumber;
     }
-
+    public String fly(){
+        return "I'm King of the world!";
+    }
     public String getName() {
         return name;
     }

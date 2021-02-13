@@ -28,6 +28,12 @@ public class Flight {
     public int getAvailableSeats(){
         return plane.getCapacity() - passengers.size();
     }
+// define method specify types and names of agruments
+    public void bookPassenger(Passenger passenger){
+        if (plane.getCapacity() > passengers.size()) {
+            passengers.add(passenger);
+        }
+    }
 
     public List<Pilot> getPilots() {
         return pilots;
