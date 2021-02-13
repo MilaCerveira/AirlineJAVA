@@ -1,3 +1,4 @@
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,9 +12,11 @@ public class Flight {
     private String flightNumber;
     private String destinationAirport;
     private String departureAirport;
-    private String departureTime;
+    private LocalDateTime departureTime;
 
-    public Flight(List<Pilot> pilots, List<CabinCrewMember> members, List<Passenger> passengers, Plane plane, String flightNumber, String destinationAirport, String departureAirport, String departureTime) {
+    public Flight(List<Pilot> pilots, List<CabinCrewMember> members, List<Passenger> passengers,
+                  Plane plane, String flightNumber, String destinationAirport,
+                  String departureAirport, LocalDateTime departureTime) {
         this.pilots = pilots;
         this.members = members;
         this.passengers = passengers;
@@ -31,6 +34,7 @@ public class Flight {
 // define method specify types and names of agruments
     public void bookPassenger(Passenger passenger){
         if (plane.getCapacity() > passengers.size()) {
+            passenger.setFlight(this.flightNumber);
             passengers.add(passenger);
         }
     }
@@ -83,11 +87,11 @@ public class Flight {
         this.departureAirport = departureAirport;
     }
 
-    public String getDepartureTime() {
+    public LocalDateTime getDepartureTime() {
         return departureTime;
     }
 
-    public void setDepartureTime(String departureTime) {
+    public void setDepartureTime(LocalDateTime departureTime) {
         this.departureTime = departureTime;
     }
 

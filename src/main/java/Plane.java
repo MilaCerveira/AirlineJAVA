@@ -8,6 +8,9 @@ public class Plane {
         this.capacity = type.getCapacity();
         this.finalWeight = type.getFinalWeight();
     }
+    public double getReservedWeightForBaggage(){
+        return this.getFinalWeight() / 2.0;
+    }
 
     public PlaneType getType() {
         return type;

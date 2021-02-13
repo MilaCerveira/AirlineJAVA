@@ -2,6 +2,7 @@
 import org.junit.Before;
 import org.junit.Test;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -31,7 +32,7 @@ public class FlightTest {
                 "100",
                 "AMS",
                 "BAR",
-                "10:00"
+                LocalDateTime.of(2021, 2, 20, 0, 0)
         );
     }
 
@@ -49,8 +50,5 @@ public class FlightTest {
         assertEquals(numOfPassengersBefore + 1, flight.getPassengers().size());
     }
 
-//    @Test
-//    public void hasFinalWeight() {
-//        assertEquals(1000, plane.getFinalWeight(), 0);
-//    }
+
 }
