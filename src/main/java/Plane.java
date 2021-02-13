@@ -8,6 +8,7 @@ public class Plane {
         this.capacity = type.getCapacity();
         this.finalWeight = type.getFinalWeight();
     }
+    // half the weight of the plane is reserved for luggage divide final weight by 2
     public double getReservedWeightForBaggage(){
         return this.getFinalWeight() / 2.0;
     }

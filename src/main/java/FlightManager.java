@@ -20,7 +20,7 @@ public class FlightManager {
         /* for each loop :
         easier to write &understand
         preferred over for loop when working with arrays
-         syntax for(dataType item: array) { ...}
+         syntax for(dataType item: array) { do something...}
          */
 //            for each passenger     inside passengers
         for (Passenger passenger : flight.getPassengers()){
