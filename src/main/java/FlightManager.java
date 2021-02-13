@@ -21,8 +21,8 @@ public class FlightManager {
         easier to write &understand
         preferred over for loop when working with arrays
          syntax for(dataType item: array) { ...}
-
          */
+//            for each passenger     inside passengers
         for (Passenger passenger : flight.getPassengers()){
             numBags += passenger.getNumBags();
         }
