@@ -5,6 +5,8 @@ public class Plane {
 
     public Plane(PlaneType type) {
         this.type = type;
+        this.capacity = type.getCapacity();
+        this.finalWeight = type.getFinalWeight();
     }
 
     public PlaneType getType() {
