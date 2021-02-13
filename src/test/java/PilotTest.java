@@ -3,7 +3,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class PilotTest {
-Pilot pilot;
+    Pilot pilot;
     @Before
     public void setUp() {
        pilot = new Pilot("Mila", "007", "123");
